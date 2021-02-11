@@ -13,11 +13,31 @@ const onClickAdd = () => {
   const li = document.createElement("li");
   li.innerText = inputText;
 
-  //divタグの子要素を設定
-  div.appendChild(li);
-
   //未完了のリストに追加
   document.getElementById("incomplete-list").appendChild(div);
+
+  //完了ボタンの作成
+  const completeButton = document.createElement("button");
+  completeButton.innerText = "完了";
+
+  // 完了ボタンの昨日
+  completeButton.addEventListener("click", () => {
+    alert("完了");
+  });
+
+  //削除ボタンの作成
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "削除";
+
+  //削除ボタンの機能
+  deleteButton.addEventListener("click", () => {
+    alert("削除");
+  });
+
+  //divタグの子要素を設定
+  div.appendChild(li);
+  div.appendChild(completeButton);
+  div.appendChild(deleteButton);
 };
 
 document
